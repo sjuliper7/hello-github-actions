@@ -1,2 +1,12 @@
 name: "Hello World my first github action"
 on: "push"
+
+jobs:
+  build:
+    name: "Hello World github action"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "Juliper"
